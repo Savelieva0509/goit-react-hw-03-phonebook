@@ -28,14 +28,6 @@ export class App extends Component {
       number,
     };
 
-    if (
-      this.state.contacts.some(
-        contact => contact.name.toLowerCase() === name.toLowerCase()
-      )
-    ) {
-      return alert(`${name} is already in contacts`);
-    }
-
     this.setState(prevState => ({
       contacts: [contact, ...prevState.contacts],
     }));
