@@ -9,7 +9,7 @@ const ContactItem = ({ id, name, number, onDeleteContact }) => (
     <button
       className={css.contactsList__button}
       type="button"
-      onClick={() => onDeleteContact(id)}
+      onClick={onDeleteContact}
     >
       Delete
     </button>
