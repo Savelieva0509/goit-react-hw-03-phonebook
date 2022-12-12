@@ -20,18 +20,18 @@ class ContactForm extends Component {
   };
 
   handleSubmit = event => {
-      event.preventDefault();
-      const { value } = event.currentTarget.name;
-      const { contacts, onSubmit } = this.props;
+    event.preventDefault();
+    const { value } = event.currentTarget.name;
+    const { contacts, onSubmit } = this.props;
 
-      if (
-          contacts.find(elem => elem.name.toLowerCase() === value.toLowerCase())
-      ) {
-        return alert(`${value} is already in contacts`);
+    if (
+      contacts.find(elem => elem.name.toLowerCase() === value.toLowerCase())
+    ) {
+      return alert(`${value} is already in contacts`);
     }
     this.reset();
     onSubmit(this.state);
-  }
+  };
 
   reset = () => {
     this.setState({ name: '', number: '' });

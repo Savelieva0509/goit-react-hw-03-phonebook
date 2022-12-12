@@ -8,23 +8,16 @@ const ContactItem = ({ id, name, number, onDeleteContact }) => (
     <p>
       {name}: {number}
     </p>
-    
-    <IconButton
-      className={css.contactsList__button}
-      onClick={onDeleteContact}>
+
+    <IconButton className={css.contactsList__button} onClick={onDeleteContact}>
       <DeleteIcon
         className={css.deleteIcon}
-        width="20" height="20"
-        fill="#fff"/>
-        Delete
+        width="20"
+        height="20"
+        fill="#fff"
+      />
+      Delete
     </IconButton>
-    {/* <button
-      className={css.contactsList__button}
-      type="button"
-      onClick={onDeleteContact}
-    >
-      
-    </button> */}
   </li>
 );
 
